@@ -1,0 +1,49 @@
+{
+  "name": "traversylandia",
+  "version": "1.0.0",
+  "description": "Full stack vue express application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/classicoman2/traversylandia.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "mongo"
+  ],
+  "author": "t.a.s.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/classicoman2/traversylandia/issues"
+  },
+  "homepage": "https://github.com/classicoman2/traversylandia#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.3",
+    "mongodb": "^4.4.1",
+    "mongoose": "^6.2.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "del": "^6.0.0",
+    "nodemon": "^2.0.4",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}

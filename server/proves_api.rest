@@ -1,0 +1,28 @@
+
+# Get all
+GET http://localhost:5000/api/cyclists/ HTTP/1.1
+
+
+# Get 1
+
+GET http://localhost:5000/api/cyclists/laurent HTTP/1.1
+
+
+# M'he adonat que en fer altes i baixes a la api rest, envia aquesta solicitud abans
+
+OPTIONS http://localhost:5000/api/cyclists HTTP/1.1
+
+# Si empro    curl -X OPTIONS http://localhost:5000 -i  me contesta els mètodes permesos:
+
+# més info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS
+
+HTTP/1.1 204 No Content
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+Vary: Access-Control-Request-Headers
+Content-Length: 0
+Date: Mon, 21 Dec 2020 22:10:21 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
