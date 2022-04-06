@@ -39,13 +39,15 @@ export default {
   name: 'Home',
   data() {
     return {
-      api_url: "http://localhost:5000/api",
+      api_url: "",
       cyclists: []
     }
   },
   methods: {
     async getCyclistsAll() {
+
       let url = `${this.api_url}/cyclists`
+
       try {
         const res = await fetch(url)
         const data = await res.json()
@@ -84,6 +86,12 @@ export default {
 
   // On mounted
   mounted() {
+    //Set api_url
+    let port = (String(window.location).split("//")[1].substring(0,9)=="localhost") ? 5000 : 80
+
+    this.api_url = `http://localhost:${port}/api`
+
+
     this.getCyclistsAll()
   }
 }
