@@ -75,11 +75,11 @@ export default {
         .then(text => console.log(text))
 
 
-        //Delete in the cyclists array
-        let index = this.cyclists.findIndex( (cyclist) => {
-          return id==cyclist._id
-        })
-        this.cyclists.splice(index, 1)
+      //Delete in the cyclists array
+      let index = this.cyclists.findIndex((cyclist) => {
+        return id == cyclist._id
+      })
+      this.cyclists.splice(index, 1)
     }
   },
 
@@ -87,10 +87,10 @@ export default {
   // On mounted
   mounted() {
     //Set api_url
-    let port = (String(window.location).split("//")[1].substring(0,9)=="localhost") ? 5000 : 80
-
-    this.api_url = `http://localhost:${port}/api`
-
+    if (String(window.location).split("//")[1].substring(0, 9) == "localhost")
+      this.api_url = `http://localhost:5000/api`
+    else
+      this.api_url = window.location
 
     this.getCyclistsAll()
   }
