@@ -8,12 +8,8 @@ require('dotenv').config()
 //Per evitar l'error de CORS en fer peticions des d'un altre servidor
 const cors = require('cors')
 
-const uri = `mongodb+srv://dbUser:${process.env.PASSWORD}@cluster0.tuhp5.mongodb.net/uci_database?retryWrites=true&w=majority`;
-mongoose.connect(uri, 
-  { useNewUrlParser: true, useUnifiedTopology: true });
-
-console.log(`uri = ${uri}`)
-
+const uri = `mongodb+srv://dbUser:${process.env.PASSWORD}@cluster0.tuhp5.mongodb.net/uci_database?retryWrites=true&w=majority`
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 /*
 Node.js body parsing middleware.
@@ -45,11 +41,9 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Sobre 'process':  https://nodejs.org/dist/latest-v8.x/docs/api/process.html#process_process
- 
+
 // Iniciam el servidor
 const port = process.env.PORT || 80
 app.listen(port, () => {
   console.log(`Servidor iniciat a http://localhost:${port}`)
 })
-
-
