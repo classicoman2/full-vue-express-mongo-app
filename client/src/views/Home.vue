@@ -90,7 +90,7 @@ export default {
     if (String(window.location).split("//")[1].substring(0, 9) == "localhost")
       this.api_url = `http://localhost:5000/api`
     else
-      this.api_url = window.location
+      this.api_url = `${window.location}/api` 
 
     this.getCyclistsAll()
   }
