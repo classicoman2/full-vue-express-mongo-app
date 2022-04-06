@@ -30,7 +30,10 @@ Molt important: cal assegurar que el servidor en Node.js pot accedir a Mongo Alt
 
 ## HEROKU: Desplegament
 - En general, seguint les instruccions disponibles al [manual de Nodejs per Heroku](https://devcenter.heroku.com/articles/deploying-nodejs) no hi ha problemes.
-- Entrar a Heroku. Anar al desplegament que toca, clicar _Settings_ i a sota, botó _Reveal Config Vars_ i afegir  allà l'usuari i la contrasenya. 
+- Entrar a Heroku. Anar al desplegament que toca, clicar _Settings_ i a sota, botó _Reveal Config Vars_ i afegir  allà:
+  - Usuari i la contrasenya segons noms del fitxer .env
+  - Afegir la variable `PORT=80`
+  - Afegir la variable `NODE_ENV=development`
 
 ## Peticions a Rest API
 Guardades  en fitxer `proves_api.rest` - emprant extensió REST CLIENT de vscode (Millor seria una collection a Postman, més pràctic)
