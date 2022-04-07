@@ -36,7 +36,7 @@ router.get('/:name', async (req, res) => {
 /** 
  * Add Post
  */
-router.post('/add', async (req, res) => {
+router.post('/', async (req, res) => {
   const cyclist = new cyclistModel(req.body);
 
   try {

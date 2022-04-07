@@ -25,18 +25,18 @@
   </table>
 
   <div class="container">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter name" />
-    </div>
-    <button id="submit" class="btn btn-secondary">Submit</button>
+    <InsertCyclistModalForm :cyclists_url="`${this.api_url}/cyclists`" @refrescaLlistatCiclistes="getCyclistsAll" />
   </div>
 </template>
 
 <script>
+import InsertCyclistModalForm from "../components/InsertCyclistModalForm.vue"
 
 export default {
   name: 'Home',
+  components: {
+    InsertCyclistModalForm
+  },
   data() {
     return {
       api_url: "",
@@ -90,7 +90,7 @@ export default {
     if (String(window.location).split("//")[1].substring(0, 9) == "localhost")
       this.api_url = `http://localhost:5000/api`
     else
-      this.api_url = `${window.location}api` 
+      this.api_url = `${window.location}api`
 
     this.getCyclistsAll()
   }

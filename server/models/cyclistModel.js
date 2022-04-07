@@ -13,7 +13,7 @@ const CyclistSchema = new mongoose.Schema({
   },
   birth_date: {
     type: Date,
-    required: true,
+    required: false,
     trim: true,
     validate(value) {
       if (value == '') throw new Error('El camp text no pot estar buid')
@@ -21,7 +21,7 @@ const CyclistSchema = new mongoose.Schema({
   },
   weight: {
     type: Number,
-    required: true,
+    required: false,
     trim: true,
     validate(value) {
       if (value == '') throw new Error('El camp text no pot estar buid')
@@ -29,7 +29,7 @@ const CyclistSchema = new mongoose.Schema({
   },
   height: {
     type: Number,
-    required: true,
+    required: false,
     trim: true,
     validate(value) {
       if (value == '') throw new Error('El camp text no pot estar buid')
