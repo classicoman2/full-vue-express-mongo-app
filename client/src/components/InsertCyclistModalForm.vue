@@ -1,7 +1,7 @@
 <template>
   <div class="modal-dialog-backdrop" style="display:none"></div>
   <!-- Button trigger modal -->
-  <button @click="showModal" type="button">New User</button>
+  <button @click="showModal" type="button">New Cyclist</button>
   <!-- Modal -->
   <div class="modal-dialog" style="display:none">
     <div class="container">
@@ -11,6 +11,18 @@
         <div class="box">
           <label for="name">Name:</label>
           <input v-model="dataForm.name" type="text" id="name" />
+        </div>
+        <div class="box">
+          <label for="birth_date">Birth Date:</label>
+          <input v-model="dataForm.birth_date" type="date" id="birth_date" />
+        </div>
+        <div class="box">
+          <label for="height">Height:</label>
+          <input v-model="dataForm.height" type="number" id="height" />
+        </div>
+        <div class="box">
+          <label for="weight">Weight:</label>
+          <input v-model="dataForm.weight" type="number" id="weight" />
         </div>
 
         <div>
@@ -34,7 +46,10 @@ export default {
     return {
       // prettier-ignore
       dataForm: {
-        name: ''
+        name: '',
+        birth_date: new Date(),
+        height: 0,
+        weight: 0
       }
     }
   },
