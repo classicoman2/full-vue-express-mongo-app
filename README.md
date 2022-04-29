@@ -1,19 +1,30 @@
-# traversylandia
-- Last modification: Abril 2022
-- Start: Juny 2020
-- Descripció: Full stack application emprant Javascript asíncron (Fetch) i Express.js, ,amb desplegament a Heroku i Atlas MongoDB.
+# Bookitsch
+## Intro
+**Bookitsch** és la millor aplicació del mercat per a registrar les teves lectures. No pots puntuar els llibres, però en pots fer ressenyes i comentaris, relacionar-los amb altres lectures, etc. APLICACIÓ EN CONSTRUCCIÓ
+- [Inspiration](https://github.com/Project-Books/book-project)
+- **Description**: Full stack app amb Tailwind, Vue 3, Express.js i MongoDB. Desplegament amb Heroku i Atlas MongoDB.
 
-## TODO
-Els TODO s'indiquen en el codi mitjançant etiqueta //TODO
+## Dev
+```bash
+# Servidor: directori .
+# Alerta: la IP ha d'estar inclosa a la lista de Atlas MongoDB (explicat a sota)
+npm run dev
+
+# Client: directori /client
+npm run serve
+```
+
+Els **TODO** s'indiquen en el codi mitjançant etiqueta //TODO
 (Nota: emprar extensió TODO Tree per marcar els TODO)
 
 
 ## MongoDB
 Database **uci_database**, Collection _cyclists_. Allotjada a [Atlas MongoDB](https://cloud.mongodb.com/v2/5ee9d0575a47887e5979df91#clusters)
 
-### Crear una Database+Collection i connectar-s'hi.
+Crear una Database+Collection i connectar-s'hi:
+
 1. Iniciar sessió amb Gmail, Crear un cluster i usuari de base de dades - _dbUser_ per defecte
-2. Crear un conexió Des de la pantalla de CLUSTER, espitjar Connexió, tria opció 2, _Connect with my Application_ o algo així. El token de conexió serà quelcom similar a:
+2. Crear un conexió Des de la pantalla de CLUSTER, espitjar Connexió, tria opció 2, _Connect with my Application_ o algo així. El token de conexió és similar a:
 
     `mongodb+srv://<elmeusuari>:<elmeuPassword>@cluster0-tuhp5.mongodb.net/<labasededades>?retryWrites=true&w=majority`
 
@@ -21,7 +32,7 @@ Database **uci_database**, Collection _cyclists_. Allotjada a [Atlas MongoDB](ht
 ```bash
 NODE_ENV=development
 USER=dbUser
-PASSWORD=aqui_la_meva_password
+PASSWORD=my_password
 ```
 
 ### IP Access 
